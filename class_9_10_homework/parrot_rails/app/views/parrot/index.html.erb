@@ -1,0 +1,21 @@
+<% if @input.present? %>
+  The Parrot says: <%= @input %>
+  <hr>
+<% end %>
+<% if @input2.present? %>
+  The Monkey says: <%= @input2 %>
+  <hr>
+<% end %>
+<h1>Animal Form</h1>
+<h2>Tell the Parrot what to say</h2>
+<%= form_tag("/parrot", method: "get") do %>
+  <%= label_tag(:text, "The parrot says:") %>
+  <%= text_field_tag(:text) %>
+  <%= submit_tag("SPEAK!") %>
+<% end %>
+<h2>Tell the Monkey what to say</h2>
+<%= form_tag("/monkey", method: "get") do %>
+  <%= label_tag(:text, "The monkey says:") %>
+  <%= text_field_tag(:text) %>
+  <%= submit_tag("SPEAK!") %>
+<% end %>
