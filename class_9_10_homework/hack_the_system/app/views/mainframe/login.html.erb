@@ -1,0 +1,10 @@
+<h1 style="text align: center; color: red;">
+  Enter the Super Secret Security Code
+</h1>
+<hr>
+<p style="text-align: center;"><%= form_tag("/mainframe", method: "post") do %>
+  <%= label_tag(:code, "Access Code:") %>
+  <%= text_field_tag(:code) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+</p>
