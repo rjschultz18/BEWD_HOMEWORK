@@ -1,0 +1,8 @@
+<h1>Ingredient Inventory</h1>
+<ul>
+  <% @ingredients.each do |ingredient| %>
+  <li><h2 class="<%= "red" if ingredient.quantity <= 2 %>"><%= ingredient.name %></h2></li>
+  <b>Quantity:</b> <%= ingredient.quantity %><br>
+  <b>Units:</b> <%= ingredient.units %>
+  <% end %>
+</ul>
