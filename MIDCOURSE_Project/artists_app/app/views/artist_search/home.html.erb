@@ -1,0 +1,7 @@
+<h1>Artist Videopedia</h1>
+<h3>
+  <%= form_tag("/artist_list", method: "get") do %>
+  <%= text_field_tag(:text) %>
+  <%= submit_tag("Hit Me!") %>
+  <% end %>
+</h3>

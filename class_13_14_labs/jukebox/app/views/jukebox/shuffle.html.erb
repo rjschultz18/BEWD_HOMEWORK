@@ -1,0 +1,8 @@
+<h1>Time to Shuffle!</h1>
+<a href="/">return home</a>
+
+<ol>
+<% @songs.each do |s| %>
+  <li><%= s.title %> by <em><%= s.artist %></em> <small><%= s.year %> | <%= s.time %></small></li>
+<% end %>
+</ol>

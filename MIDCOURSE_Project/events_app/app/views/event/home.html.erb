@@ -1,0 +1,18 @@
+<h1>Welcome to Music Events Knowledge</h1>
+<h3>Explore an artist's tour dates, or a venue's atmosphere.</h3>
+<br>
+
+<h4>Search your favorite artist here!</h4>
+  <%= form_tag("event/artist", method: "get") do %>
+    <%= label_tag(:artist_input, "I want to see:") %>
+    <%= text_field_tag(:artist_input) %>
+    <%= submit_tag("Show Me!") %>
+    <% end %>
+<br>
+
+<h4>Search a venue you'd like to check out here!</h4>
+<%= form_tag("event/venue", method: "get") do %>
+  <%= label_tag(:venue_input, "I want to see:") %>
+  <%= text_field_tag(:venue_input) %>
+  <%= submit_tag("Show Me!") %>
+  <% end %>
